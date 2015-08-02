@@ -1,0 +1,11 @@
+# Folders
+.vs
+bin
+obj
+Properties
+
+#files
+Web.config
+Web.*.config
+*.sln
+*.csproj
