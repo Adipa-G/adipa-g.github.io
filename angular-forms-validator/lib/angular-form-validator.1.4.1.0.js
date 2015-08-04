@@ -87,14 +87,37 @@
             };
         };
 
-        function validateRequired(value, msg) {
-            if (!value) {
-                if (msg) {
-                    msg = msg.replace('[', '').replace(']', '');
+        function extractParams(scope,modelController, params) {
+            var paramArr = params.replace('[', '').replace(']', '').split(',');
+            var resultArr = [];
+
+            for (var i = 0; i < paramArr.length; i++) {
+                var param = paramArr[i].trim();
+                if (param.charAt(0) === '\'' || param.charAt(0) === '\"') {
+                    resultArr.push(param.replace(/\"/g, '').replace(/\'/g, ''));
                 } else {
-                    msg = 'This field is required';
+                    resultArr.push(scope.$eval(param));
+                    if (!modelController[param + 'watchSet']) {
+                        modelController[param + 'watchSet'] = true;
+                        scope.$watch(param, function (oldValue, newValue) {
+                            if (oldValue !== newValue) {
+                                modelController.$validate();
+                            }
+                        });
+                    }
                 }
-                return { valid: false, message: msg };
+            }
+            return resultArr;
+        };
+        
+        function validateRequired(value, params) {
+            var required = params[0] === true || params.length <= 1;
+            var message = params[0] !== true 
+                ? params[0] : params.length === 2 
+                    ? params[1] : 'This field is required';
+
+            if (required && !value) {
+                return { valid: false, message: message };
             }
             return { valid: true, message: '' };
         };
@@ -215,10 +238,11 @@
                     var result = { valid: true, message: '' };
                     while (match != null && match[0]) {
                         var typeResult = null;
+                        var params = extractParams(scope,modelController,match[2]);
                         switch (match[1].toLowerCase())
                         {
                             case 'required':
-                                typeResult = validateRequired(value,match[2]);
+                                typeResult = validateRequired(value, params);
                                 break;
                             case 'string':
                                 typeResult = validateString(value, match[2]);

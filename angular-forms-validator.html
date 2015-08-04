@@ -79,6 +79,27 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
                 </tabset>
             </div>
         </div>
+        <h3>Validate using variables.</h3>
+        <p>Validation can be enabled or disabled using scope variables, by simply using a variable instead of fixed value.</p>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="intro">
+                <ng-include src="'/angular-forms-validator/app/view/introViewVariables.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/view/introViewVariables.html"></div>
+                    </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/controller/introVariableController.js"></div>
+                    </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
         <h3>Validate string length.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="stringLength">
@@ -111,6 +132,7 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
 
     <script src="angular-forms-validator/app/app.js"></script>
     <script src="angular-forms-validator/app/controller/introController.js"></script>
+    <script src="angular-forms-validator/app/controller/introVariableController.js"></script>
     <script src="angular-forms-validator/app/controller/stringLengthController.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
