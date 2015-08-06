@@ -51,6 +51,13 @@
             </div>
             <div class="col-md-2">&nbsp;</div>
         </div>
+        <h3>All Validators.</h3>
+        <p>Have a look at all the possibilities with the Angular Form Validator below.</p>
+        <div class="row">
+            <div class="col-md-12" ng-controller="allValidators">
+                <ng-include src="'/angular-forms-validator/app/view/allValidatorsView.html'"></ng-include>
+            </div>
+        </div>
         <h3>Validate required field.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="intro">
@@ -131,6 +138,7 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
     <script src="angular-forms-validator/lib/angular-form-validator.1.4.1.0.js"></script>
 
     <script src="angular-forms-validator/app/app.js"></script>
+    <script src="angular-forms-validator/app/controller/allValidatorsController.js"></script>
     <script src="angular-forms-validator/app/controller/introController.js"></script>
     <script src="angular-forms-validator/app/controller/introVariableController.js"></script>
     <script src="angular-forms-validator/app/controller/stringLengthController.js"></script>
