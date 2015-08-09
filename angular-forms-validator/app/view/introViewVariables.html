@@ -1,0 +1,16 @@
+﻿<form name="introVariableform" ng-controller="introVariable">
+    <div class="form-group">
+        <label for="requiredField">Enable validation</label>
+        <input type="checkbox" class="checkbox" ng-model="model.enableValidation">
+    </div>
+    <div class="form-group">
+        <label for="requiredField">Validation Message</label>
+        <input type="text" class="form-control" ng-model="model.validationMessage">
+    </div>
+    <div class="form-group" validator="required[model.enableValidation,model.validationMessage]">
+        <label for="requiredField">Required Field</label>
+        <input type="text" class="form-control" id="requiredField" name="requiredField"
+               placeholder="Required Field" ng-model="model.requiredField">
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="!introVariableform.$valid">Submit</button>
+</form>

@@ -1,0 +1,57 @@
+﻿<form name="allForm" ng-controller="allValidators">
+        <div class="container-fluid">
+            <div class="row grid-row">
+                <div class="col-md-1"><strong>Type</strong></div>
+                <div class="col-md-2"><strong>Validated Field</strong></div>
+                <div class="col-md-1"><strong>Enabled</strong></div>
+                <div class="col-md-2"><strong>Message</strong></div>
+                <div class="col-md-6"><strong>Parameters</strong></div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">Required</div>
+                <div class="col-md-2" validator="required[requiredVal.enabled,requiredVal.message]">
+                    <input type="text" class="form-control" 
+                           id="requiredField" name="requiredField" 
+                           ng-model="requiredVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="requiredVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="requiredVal.message">
+                </div>
+                <div class="col-md-6">&nbsp;</div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">String</div>
+                <div class="col-md-2" validator="string[stringVal.enabled,stringVal.minLength,stringVal.maxLength,stringVal.message]">
+                    <input type="text" class="form-control" 
+                           id="stringField" name="stringField" 
+                           ng-model="stringVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="stringVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="stringVal.message">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-inline">
+                        <label>Min Length</label>
+                        <input type="text" ng-model="stringVal.minLength">
+                        <label>Max Length</label>
+                        <input type="text" ng-model="stringVal.maxLength">
+                    </div>
+                </div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-default" ng-disabled="!allForm.$valid">Submit</button>
+                </div>
+            </div>
+        </div>
+</form>
