@@ -11,7 +11,6 @@
             if (!object)
                 return null;
 
-            // ReSharper disable once MissingHasOwnPropertyInForeach
             for (var attrName in object) {
                 if (attrNameEquals(attrName, name)) {
                     return object[attrName];
@@ -93,7 +92,7 @@
             var regexp = /([^\[\],]*)(\[([^\[\]]*\])|\[([\'\"](.)*[\'\"])*\])?([,]?)/g;
             var match = regexp.exec(ruleStr);
 
-            while (match != null && match[0]) {
+            while (match !== null && match[0]) {
                 var rule = {
                     type: match[1].toLowerCase(),
                     params: []
@@ -191,6 +190,76 @@
                 }
             }
             return { valid: valid, message: message };
+        };
+        
+        function validateNumber(value, params) {
+            if (!params)
+                return { valid: true, message: '' };
+
+            if (!value)
+                value = '';
+
+            var min = parseInt(params[0].value);
+            var max = params.length > 0 ? parseInt(params[1].value) : INT.MAX_VALUE;
+            var val = Number(value);
+            var valid = !isNaN(val)
+                && (isNaN(min) || (!isNaN(min) && val >= min))
+                && (isNaN(max) || (!isNaN(max) && val <= max));
+
+            var message = params.length > 2 && !valid ? params[2].value : '';
+            if (!message && !valid) {
+                message = 'This field should be a number with ';
+                if (!isNaN(min)) {
+                    message += ' minimum of ' + min;
+                    if (!isNaN(max)) {
+                        message += ' and ';
+                    }
+                }
+                if (!isNaN(max)) {
+                    message += ' maximum of ' + max;          
+                }
+            }
+            return { valid: valid, message: message };
+        };
+        
+        function validateRegEx(value,params){
+            if (!params)
+                return { valid: true, message: '' };
+
+            if (!value)
+                value = '';
+            
+            var expr = new RegExp(params[0].value,'gi');
+            var valid = expr.test(value);
+            
+            var message = params.length > 1 && !valid ? params[1].value : '';
+            if (!message && !valid) {
+                message = 'This field should be a of pattern ' + params[0];
+            }
+            
+            return { valid: valid, message: message };
+        };
+        
+        function validateEmail(value,params){
+            if (!value)
+                value = '';
+            
+            var message = params.length > 0 
+            ? params[0].value 
+            : 'Please enter an email address';
+            
+            return validateRegEx(value,[{value : '^(([^<>()[\\]\\.,;:\\s@\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$'},{value : message}]);
+        };
+        
+         function validateUrl(value,params){
+            if (!value)
+                value = '';
+            
+            var message = params.length > 0 
+            ? params[0].value 
+            : 'Please enter a URL';
+            
+            return validateRegEx(value,[{value : '(http|ftp|https)://[\\w-]+(\\.[\\w-]+)+([\\w.,@?^=%&amp;:/~+#-]*[\\w@?^=%&amp;/~+#-])?'},{value : message}]);
         };
 
         /*
@@ -292,6 +361,18 @@
                                 break;
                             case 'string':
                                 typeResult = validateString(value, rule.params);
+                                break;
+                            case 'number':
+                                typeResult = validateNumber(value, rule.params);
+                                break;
+                            case 'regex':
+                                typeResult = validateRegEx(value, rule.params);
+                                break;
+                            case 'email':
+                                typeResult = validateEmail(value, rule.params);
+                                break;
+                            case 'url':
+                                typeResult = validateUrl(value, rule.params);
                                 break;
                         }
                         if (typeResult) {
