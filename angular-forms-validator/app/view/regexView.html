@@ -1,0 +1,8 @@
+﻿<form name="introform" ng-controller="pattern">
+    <div class="form-group" validator="regex['\S+@\S+\.\S+']">
+        <label for="fieldRegex">Specific pattern</label>
+        <input type="text" class="form-control" id="patternField" name="patternField"
+               placeholder="Enter a text" ng-model="model.patternField">
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="!introform.$valid">Submit</button>
+</form>

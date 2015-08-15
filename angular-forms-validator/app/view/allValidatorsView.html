@@ -73,6 +73,60 @@
                 </div>
             </div>
             <div class="row grid-row">
+                <div class="col-md-1">Pattern</div>
+                <div class="col-md-2" validator="regex[regexVal.enabled,regexVal.pattern,regexVal.message]">
+                    <input type="text" class="form-control" 
+                           id="patternField" name="patternField" 
+                           ng-model="regexVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="regexVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="regexVal.message">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-inline">
+                        <label>Pattern</label>
+                        <input type="text" ng-model="regexVal.pattern">
+                    </div>
+                </div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">Email</div>
+                <div class="col-md-2" validator="email[emailVal.enabled,emailVal.message]">
+                    <input type="text" class="form-control" 
+                           id="emailField" name="emailField" 
+                           ng-model="emailVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="emailVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="emailVal.message">
+                </div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">Url</div>
+                <div class="col-md-2" validator="url[urlVal.enabled,urlVal.message]">
+                    <input type="text" class="form-control" 
+                           id="urlField" name="urlField" 
+                           ng-model="urlVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="urlVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="urlVal.message">
+                </div>
+            </div>
+            <div class="row grid-row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-default" ng-disabled="!allForm.$valid">Submit</button>
                 </div>

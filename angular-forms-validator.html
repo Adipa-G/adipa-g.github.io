@@ -147,6 +147,66 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
                 </tabset>
             </div>
         </div>
+        <h3>Validate pattern.</h3>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="pattern">
+                <ng-include src="'/angular-forms-validator/app/view/regexView.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/view/regexView.html"></div>
+                    </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/controller/regexController.js"></div>
+                    </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <h3>Validate email.</h3>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="email">
+                <ng-include src="'/angular-forms-validator/app/view/emailView.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/view/emailView.html"></div>
+                    </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/controller/emailController.js"></div>
+                    </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <h3>Validate url.</h3>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="url">
+                <ng-include src="'/angular-forms-validator/app/view/urlView.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/view/urlView.html"></div>
+                    </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                        <div embed-code file-url="angular-forms-validator/app/controller/urlController.js"></div>
+                    </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
     </div>
 
     <script src="angular-forms-validator/lib/angular/angular.1.4.1.js"></script>
@@ -163,6 +223,9 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
     <script src="angular-forms-validator/app/controller/introVariableController.js"></script>
     <script src="angular-forms-validator/app/controller/stringLengthController.js"></script>
     <script src="angular-forms-validator/app/controller/numbersController.js"></script>
+    <script src="angular-forms-validator/app/controller/regexController.js"></script>
+    <script src="angular-forms-validator/app/controller/emailController.js"></script>
+    <script src="angular-forms-validator/app/controller/urlController.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

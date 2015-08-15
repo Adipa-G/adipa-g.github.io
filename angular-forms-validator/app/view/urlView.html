@@ -1,0 +1,8 @@
+﻿<form name="introform" ng-controller="url">
+    <div class="form-group" validator="url">
+        <label for="fieldRegex">Url</label>
+        <input type="text" class="form-control" id="urlField" name="urlField"
+               placeholder="Enter a Url" ng-model="model.urlField">
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="!introform.$valid">Submit</button>
+</form>
