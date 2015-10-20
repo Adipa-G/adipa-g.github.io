@@ -15,23 +15,23 @@
     <meta name="spiders" content="all" />
     <meta name="webcrawlers" content="all" />
 
-    <meta name="company" content="angular-form-validator" />
+    <meta name="company" content="ngFormValidator" />
     <meta name="abstract" content="form validator for angularJS" />
 
     <meta name="subject" content="angular-form-validator" />
     <meta name="description" content="form validator for angularJS" />
     <meta name="keywords" content="angular,angularjs,validation,form,angular validation,form validation,validator,client-side" />
 
-    <meta property="og:title" content="angular-form-validator" />
-    <meta property="og:url" content="http://adipa-g.github.io/angular-forms-validator.html" />
+    <meta property="og:title" content="ngFormValidator" />
+    <meta property="og:url" content="http://adipa-g.github.io/ngFormValidator.html" />
     <meta property="og:description" content="form validator for angularJS" />
 
-    <title>Angular Form Validator</title>
-    <link rel="stylesheet" href="angular-forms-validator/lib/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="angular-forms-validator/lib/bootstrap/css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="angular-forms-validator/lib/bootstrap/css/callouts.css" />
-    <link rel="stylesheet" href="angular-forms-validator/lib/highlight/css/obsidian.css" />
-    <link rel="stylesheet" href="angular-forms-validator/css/site.css" />
+    <title>ngFormValidator</title>
+    <link rel="stylesheet" href="ngFormValidator/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="ngFormValidator/lib/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="ngFormValidator/lib/bootstrap/css/callouts.css" />
+    <link rel="stylesheet" href="ngFormValidator/lib/highlight/css/obsidian.css" />
+    <link rel="stylesheet" href="ngFormValidator/css/site.css" />
 </head>
 
 <body>
@@ -43,9 +43,9 @@
                 <div class="bs-callout bs-callout-primary">
                     <h3>How to use the library with Bootstrap styles</h3>
                     <ul>
-                        <li>Include the <strong>angular-form-validator.x.x.x.x.js</strong></li>
+                        <li>Include the <strong>ngFormValidator.x.x.x.x.js</strong></li>
                         <li>Include <strong>bootsrap.css</strong> or <strong>bootsrap.min.css</strong></li>
-                        <li>Add <strong>angular.form.validator</strong> as an angular module dependency</li>
+                        <li>Add <strong>ngFormValidator</strong> as an angular module dependency</li>
                     </ul>
                 </div>
             </div>
@@ -55,30 +55,30 @@
         <p>Have a look at all the possibilities with the Angular Form Validator below.</p>
         <div class="row val-example">
             <div class="col-md-12" ng-controller="allValidators">
-                <ng-include src="'/angular-forms-validator/app/view/allValidatorsView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/allValidatorsView.html'"></ng-include>
             </div>
         </div>
         <h3>Validate required field.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="intro">
-                <ng-include src="'/angular-forms-validator/app/view/introView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/introView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/introView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/introView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/introController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/introController.js"></div>
                     </pre>
                     </tab>
                     <tab heading="App">
                         <pre>
                         <code>(function() {
-var app = angular.module('validatorApp', ['angular.form.validator']);
+var app = angular.module('validatorApp', ['ngFormValidator']);
 })();
                         </code>
                     </pre>
@@ -90,18 +90,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <p>Validation can be enabled or disabled using scope variables, by simply using a variable instead of fixed value.</p>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="intro">
-                <ng-include src="'/angular-forms-validator/app/view/introViewVariables.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/introViewVariables.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/introViewVariables.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/introViewVariables.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/introVariableController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/introVariableController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -110,18 +110,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <h3>Validate string length.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="stringLength">
-                <ng-include src="'/angular-forms-validator/app/view/stringLengthView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/stringLengthView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/stringLengthView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/stringLengthView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/stringLengthController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/stringLengthController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -130,18 +130,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <h3>Validate number range.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="numbers">
-                <ng-include src="'/angular-forms-validator/app/view/numbersView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/numbersView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/numbersView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/numbersView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/numbersController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/numbersController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -150,18 +150,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <h3>Validate pattern.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="pattern">
-                <ng-include src="'/angular-forms-validator/app/view/regexView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/regexView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/regexView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/regexView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/regexController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/regexController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -170,18 +170,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <h3>Validate email.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="email">
-                <ng-include src="'/angular-forms-validator/app/view/emailView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/emailView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/emailView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/emailView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/emailController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/emailController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -190,18 +190,18 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         <h3>Validate url.</h3>
         <div class="row val-example">
             <div class="col-md-4 demo" ng-controller="url">
-                <ng-include src="'/angular-forms-validator/app/view/urlView.html'"></ng-include>
+                <ng-include src="'/ngFormValidator/app/view/urlView.html'"></ng-include>
             </div>
             <div class="col-md-8 code">
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/view/urlView.html"></div>
+                        <div embed-code file-url="ngFormValidator/app/view/urlView.html"></div>
                     </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="angular-forms-validator/app/controller/urlController.js"></div>
+                        <div embed-code file-url="ngFormValidator/app/controller/urlController.js"></div>
                     </pre>
                     </tab>
                 </tabset>
@@ -209,23 +209,23 @@ var app = angular.module('validatorApp', ['angular.form.validator']);
         </div>
     </div>
 
-    <script src="angular-forms-validator/lib/angular/angular.1.4.1.js"></script>
-    <script src="angular-forms-validator/lib/modernizr/modernizr.js"></script>
-    <script src="angular-forms-validator/lib/jquery/jquery.min.js"></script>
-    <script src="angular-forms-validator/lib/highlight/js/highlight.pack.js"></script>
-    <script src="angular-forms-validator/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="angular-forms-validator/lib/ui-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="angular-forms-validator/lib/angular-form-validator.1.4.1.0.js"></script>
+    <script src="ngFormValidator/lib/angular/angular.1.4.1.js"></script>
+    <script src="ngFormValidator/lib/modernizr/modernizr.js"></script>
+    <script src="ngFormValidator/lib/jquery/jquery.min.js"></script>
+    <script src="ngFormValidator/lib/highlight/js/highlight.pack.js"></script>
+    <script src="ngFormValidator/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="ngFormValidator/lib/ui-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="ngFormValidator/lib/angular-form-validator.1.4.1.0.js"></script>
 
-    <script src="angular-forms-validator/app/app.js"></script>
-    <script src="angular-forms-validator/app/controller/allValidatorsController.js"></script>
-    <script src="angular-forms-validator/app/controller/introController.js"></script>
-    <script src="angular-forms-validator/app/controller/introVariableController.js"></script>
-    <script src="angular-forms-validator/app/controller/stringLengthController.js"></script>
-    <script src="angular-forms-validator/app/controller/numbersController.js"></script>
-    <script src="angular-forms-validator/app/controller/regexController.js"></script>
-    <script src="angular-forms-validator/app/controller/emailController.js"></script>
-    <script src="angular-forms-validator/app/controller/urlController.js"></script>
+    <script src="ngFormValidator/app/app.js"></script>
+    <script src="ngFormValidator/app/controller/allValidatorsController.js"></script>
+    <script src="ngFormValidator/app/controller/introController.js"></script>
+    <script src="ngFormValidator/app/controller/introVariableController.js"></script>
+    <script src="ngFormValidator/app/controller/stringLengthController.js"></script>
+    <script src="ngFormValidator/app/controller/numbersController.js"></script>
+    <script src="ngFormValidator/app/controller/regexController.js"></script>
+    <script src="ngFormValidator/app/controller/emailController.js"></script>
+    <script src="ngFormValidator/app/controller/urlController.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

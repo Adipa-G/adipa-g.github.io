@@ -1,5 +1,5 @@
 ﻿(function() {
-    var app = angular.module('validatorApp', ['angular.form.validator', 'ui.bootstrap']);
+    var app = angular.module('validatorApp', ['ngFormValidator', 'ui.bootstrap']);
 
     app.directive('embedCode', ['$http', function ($http) {
         var link = function(scope, element, attrs) {
