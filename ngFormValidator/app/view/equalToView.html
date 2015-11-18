@@ -1,0 +1,13 @@
+﻿<form name="introform" ng-controller="equalTo">
+    <div class="form-group">
+        <label for="emailField">Email</label>
+        <input type="text" class="form-control" id="urlField" name="emailField"
+               placeholder="Enter an email address" ng-model="model.email">
+    </div>
+    <div class="form-group" validator="equalTo['emailField']">
+        <label for="confirmEmailField">Confirm Email</label>
+        <input type="text" class="form-control" id="urlField" name="confirmEmailField"
+               placeholder="Enter a Url" ng-model="model.confirmEmail">
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="!introform.$valid">Submit</button>
+</form>

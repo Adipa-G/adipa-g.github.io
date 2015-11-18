@@ -1,0 +1,8 @@
+﻿<form name="introform" ng-controller="custom">
+    <div class="form-group" validator="custom['customValidate']">
+        <label for="customField">Odd Number</label>
+        <input type="text" class="form-control" name="customField"
+               placeholder="Enter an odd number" ng-model="model.customField">
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="!introform.$valid">Submit</button>
+</form>

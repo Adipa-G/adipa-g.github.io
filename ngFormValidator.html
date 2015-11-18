@@ -67,13 +67,13 @@
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/introView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/introView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/introController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/introController.js"></div>
+                        </pre>
                     </tab>
                     <tab heading="App">
                         <pre>
@@ -96,13 +96,13 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/introViewVariables.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/introViewVariables.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/introVariableController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/introVariableController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -116,13 +116,13 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/stringLengthView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/stringLengthView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/stringLengthController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/stringLengthController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -136,13 +136,13 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/numbersView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/numbersView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/numbersController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/numbersController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -156,13 +156,13 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/regexView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/regexView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/regexController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/regexController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -176,13 +176,13 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/emailView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/emailView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/emailController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/emailController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -196,13 +196,53 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
                 <tabset justified="true">
                     <tab heading="View">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/view/urlView.html"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/view/urlView.html"></div>
+                        </pre>
                     </tab>
                     <tab heading="Controller">
                         <pre>
-                        <div embed-code file-url="ngFormValidator/app/controller/urlController.js"></div>
-                    </pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/urlController.js"></div>
+                        </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <h3>Confirm two fields are the same.</h3>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="equalTo">
+                <ng-include src="'/ngFormValidator/app/view/equalToView.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                            <div embed-code file-url="ngFormValidator/app/view/equalToView.html"></div>
+                        </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/equalToController.js"></div>
+                        </pre>
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+        <h3>Custom validator.</h3>
+        <div class="row val-example">
+            <div class="col-md-4 demo" ng-controller="custom">
+                <ng-include src="'/ngFormValidator/app/view/customView.html'"></ng-include>
+            </div>
+            <div class="col-md-8 code">
+                <tabset justified="true">
+                    <tab heading="View">
+                        <pre>
+                            <div embed-code file-url="ngFormValidator/app/view/customView.html"></div>
+                        </pre>
+                    </tab>
+                    <tab heading="Controller">
+                        <pre>
+                            <div embed-code file-url="ngFormValidator/app/controller/customController.js"></div>
+                        </pre>
                     </tab>
                 </tabset>
             </div>
@@ -226,6 +266,8 @@ var app = angular.module('validatorApp', ['ngFormValidator']);
     <script src="ngFormValidator/app/controller/regexController.js"></script>
     <script src="ngFormValidator/app/controller/emailController.js"></script>
     <script src="ngFormValidator/app/controller/urlController.js"></script>
+    <script src="ngFormValidator/app/controller/equalToController.js"></script>
+    <script src="ngFormValidator/app/controller/customController.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {

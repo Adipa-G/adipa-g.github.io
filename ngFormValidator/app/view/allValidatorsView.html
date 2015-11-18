@@ -2,7 +2,7 @@
         <div class="container-fluid">
             <div class="row grid-row">
                 <div class="col-md-1"><strong>Type</strong></div>
-                <div class="col-md-2"><strong>Validated Field</strong></div>
+                <div class="col-md-2"><strong>Validated Field(s)</strong></div>
                 <div class="col-md-1"><strong>Enabled</strong></div>
                 <div class="col-md-2"><strong>Message</strong></div>
                 <div class="col-md-6"><strong>Parameters</strong></div>
@@ -124,6 +124,39 @@
                 <div class="col-md-2">
                     <input type="text" class="form-control" 
                            ng-model="urlVal.message">
+                </div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">Equal To</div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           id="urlField" name="value1Field" 
+                           ng-model="equalToVal.value1">
+                    <div validator="equalTo[equalToVal.enabled,'value1Field',equalToVal.message]">
+                        <input type="text" class="form-control all-validators-multiple-input" 
+                               id="urlField" name="value2Field" 
+                               ng-model="equalToVal.value2">
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="equalToVal.enabled">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" 
+                           ng-model="equalToVal.message">
+                </div>
+            </div>
+            <div class="row grid-row">
+                <div class="col-md-1">Custom</div>
+                <div class="col-md-2" validator="custom[customVal.enabled,'customValidate']">
+                    <input type="text" class="form-control"  
+                           id="customField" name="customField" 
+                           ng-model="customVal.value">
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" class="checkbox"
+                           ng-model="customVal.enabled">
                 </div>
             </div>
             <div class="row grid-row">
